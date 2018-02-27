@@ -19,6 +19,7 @@ import java.util.Map;
  */
 public class RestTemplateExamples {
 
+    // site for reference is: https://api.predic8.de/shop/docs
     public static final String API_ROOT = "https://api.predic8.de:443/shop";
 
     @Test
