@@ -1,15 +1,19 @@
 package guru.springframework.api.domain;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Login implements Serializable {
 
-    private static final long serialVersionUID = -107898298913218882L;
     private String username;
     private String password;
     private String md5;
     private String sha1;
     private String sha256;
+
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private final static long serialVersionUID = 1041720428871730372L;
 
     public String getUsername() {
         return username;
@@ -50,4 +54,13 @@ public class Login implements Serializable {
     public void setSha256(String sha256) {
         this.sha256 = sha256;
     }
+
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
+    }
+
+    public void setAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
+    }
+
 }

@@ -1,6 +1,8 @@
 package guru.springframework.api.domain;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 public class User implements Serializable {
 
@@ -15,7 +17,9 @@ public class User implements Serializable {
     private String language;
     private String currency;
 
-    private static final long serialVersionUID = -5994154628645413472L;
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+    private final static long serialVersionUID = 270727596527329664L;
 
     public String getGender() {
         return gender;
@@ -96,4 +100,13 @@ public class User implements Serializable {
     public void setCurrency(String currency) {
         this.currency = currency;
     }
+
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
+    }
+
+    public void setAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
+    }
+
 }

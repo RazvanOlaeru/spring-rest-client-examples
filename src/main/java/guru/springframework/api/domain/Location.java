@@ -1,14 +1,18 @@
 package guru.springframework.api.domain;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
-public class Location  implements Serializable {
+public class Location implements Serializable {
 
-    private static final long serialVersionUID = -116831046746274156L;
     private String street;
     private String city;
     private String state;
     private String postcode;
+
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private final static long serialVersionUID = -3532048267747973846L;
 
     public String getStreet() {
         return street;
@@ -41,4 +45,13 @@ public class Location  implements Serializable {
     public void setPostcode(String postcode) {
         this.postcode = postcode;
     }
+
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
+    }
+
+    public void setAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
+    }
+
 }
