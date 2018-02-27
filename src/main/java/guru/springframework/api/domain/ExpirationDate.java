@@ -1,28 +1,27 @@
-package guru.springframework.springrestclientexamples.domain;
+package guru.springframework.api.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class ExpirationDate implements Serializable{
 
     private static final long serialVersionUID = 7961021170049862992L;
-    private Date date;
-    private String timezone_type;
+    private String date;
+    private Integer timezone_type;
     private String timezone;
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public String getTimezone_type() {
+    public Integer getTimezone_type() {
         return timezone_type;
     }
 
-    public void setTimezone_type(String timezone_type) {
+    public void setTimezone_type(Integer timezone_type) {
         this.timezone_type = timezone_type;
     }
 

@@ -1,4 +1,4 @@
-package guru.springframework.springrestclientexamples.domain;
+package guru.springframework.api.domain;
 
 import java.io.Serializable;
 
@@ -6,7 +6,7 @@ public class Card implements Serializable{
 
     private static final long serialVersionUID = -7038838964468813517L;
     private String type;
-    private Integer number;
+    private String number;
     private ExpirationDate expiration_date;
     private String iban;
     private String swift;
@@ -19,11 +19,11 @@ public class Card implements Serializable{
         this.type = type;
     }
 
-    public Integer getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(Integer number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 

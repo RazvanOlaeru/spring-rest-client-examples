@@ -1,4 +1,4 @@
-package guru.springframework.springrestclientexamples.domain;
+package guru.springframework.api.domain;
 
 import java.io.Serializable;
 
@@ -8,7 +8,7 @@ public class Location  implements Serializable {
     private String street;
     private String city;
     private String state;
-    private Integer postcode;
+    private String postcode;
 
     public String getStreet() {
         return street;
@@ -34,11 +34,11 @@ public class Location  implements Serializable {
         this.state = state;
     }
 
-    public Integer getPostcode() {
+    public String getPostcode() {
         return postcode;
     }
 
-    public void setPostcode(Integer postcode) {
+    public void setPostcode(String postcode) {
         this.postcode = postcode;
     }
 }
